@@ -1,0 +1,32 @@
+File example:
+manipulate file -> run file -> monitor for crash -> kill application
+        /\                                                |
+         `------------------------------------------------'
+
+load file -> manipulate file -> run file -> monitor for frash -> kill application
+
+load file 			- subject
+- pass filename
+- read contents
+manipulate file 	- manipulator
+- get subject contents
+- manipulate subject contents
+- store subject contents
+run file			- executer
+- get manipulated filename
+- execute file
+- get pid
+monitor for crash	- monitor
+- pause
+- check if pid still exists
+- check if crash file exists
+- if exists, log file and crashdump
+kill application	- executer
+- kill pid
+
+
+subject(filename)
+init: read filename -> local subject variable
+getCurrentSubject -> return filename
+setUpdatedSubject -> 
+

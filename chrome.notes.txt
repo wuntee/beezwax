@@ -1,0 +1,51 @@
+/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --single-process --disable-seccomp-sandbox --renderer-cmd-prefix='xterm -title renderer -e gdb --args' /Users/wuntee/workspace-ruby/beezwax/crashes/seed-1331319662.iteration-2/subject 
+
+seed-1331319662.iteration-2
+Program received signal EXC_ARITHMETIC, Arithmetic exception.
+0x073ed53c in PPP_GetInterface ()
+(gdb) x/i $eip
+0x73ed53c <PPP_GetInterface+611772>:    div    %ebx
+(gdb) i r
+eax            0xffffffff       -1
+ecx            0x0      0
+edx            0x0      0
+ebx            0x0      0
+esp            0xbfffb5f0       0xbfffb5f0
+ebp            0xbfffb638       0xbfffb638
+esi            0x1      1
+edi            0x486d530        75945264
+eip            0x73ed53c        0x73ed53c <PPP_GetInterface+611772>
+eflags         0x10246  66118
+cs             0x1b     27
+ss             0x23     35
+ds             0x23     35
+es             0x23     35
+fs             0x0      0
+gs             0xf      15
+
+
+seed-1332855357.iteration-2
+Program received signal EXC_BAD_ACCESS, Could not access memory.
+Reason: KERN_PROTECTION_FAILURE at address: 0x00000000
+0x9a3da8d1 in CFBooleanGetValue ()
+(gdb) x/i $eip
+0x9a3da8d1 <CFBooleanGetValue+17>:      mov    (%edi),%eax
+(gdb) i r   
+eax            0x0      0
+ecx            0x100    256
+edx            0x2f2ce40        49466944
+ebx            0x0      0
+esp            0xbfffde90       0xbfffde90
+ebp            0xbfffdea8       0xbfffdea8
+esi            0x9a3da8cd       -1707235123
+edi            0x0      0
+eip            0x9a3da8d1       0x9a3da8d1 <CFBooleanGetValue+17>
+eflags         0x10286  66182
+cs             0x1b     27
+ss             0x23     35
+ds             0x23     35
+es             0x23     35
+fs             0x0      0
+gs             0xf      15
+
+
